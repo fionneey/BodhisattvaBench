@@ -31,7 +31,7 @@ Common options:
 - Limit items: `--max-items 5`
 - Run a subset: `--ids A1-1A A1-1B` or `--dimension A4`
 - Skip judging (model outputs only): `--skip-judge`
-- Change judge model: `--judge-model gpt-4o`
+- Change judge model: `--judge-model gpt-5.1`
 - Choose models: `--models grok` or `--models gemini`
 - Summarize results: `python report.py --input runs/results.jsonl --threshold 3`
 
@@ -70,7 +70,7 @@ It prints per-model averages (dimension and upaya), per-dimension averages, and 
 
 ## Notes
 
-- Grok uses the xAI chat-completions API (default model `grok-beta`).
-- Gemini uses the `generateContent` endpoint (default model `gemini-pro`).
+- Grok uses the xAI chat-completions API (default model `grok-4.1-thinking`).
+- Gemini uses the `generateContent` endpoint (default model `gemini-3-pro`).
 - The OpenAI judge runs with temperature 0 to make scores stable.
 - Costs can add up; use `--max-items` and `--ids` when testing new prompts.
